@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Trade</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="A task trade platform.">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link href="./Content/wing.css" rel="stylesheet" />
+  <link href="./Content/bootstrap11.css" rel="stylesheet" />
+  <link href="./Content/animations.css" rel="stylesheet" />
+  <link href="./Content/styles.css" rel="stylesheet" />
+  <link href="./Content/style.css" rel="stylesheet" />
+</head>
+
+<body ng-cloak ng-controller="NavbarController as vm">
+
+	<div class="nav">
+	  <div class="right">	
+		<div class="logo">
+		<svg viewBox="0 0 32 32" class="icon-small" width="32" height="32" aria-hidden="true"><title></title><g><path d="M31.562 25.905l-9.423-9.423c-0.583-0.583-1.538-0.583-2.121 0l-0.707 0.707-5.75-5.75 9.439-9.439h-10l-4.439 4.439-0.439-0.439h-2.121v2.121l0.439 0.439-6.439 6.439 5 5 6.439-6.439 5.75 5.75-0.707 0.707c-0.583 0.583-0.583 1.538 0 2.121l9.423 9.423c0.583 0.583 1.538 0.583 2.121 0l3.535-3.535c0.583-0.583 0.583-1.538 0-2.121z"></path>
+		</g></svg>
+		</div>
+		<div class="nav-item">
+			<button class="outline" ng-click="vm.quickPost()" ng-show="vm.qPostShow">Post &nbsp;</button>
+			<button class="outline" ng-click="vm.loginOrOut()" ng-show="vm.loginoutShow">{{vm.loginLogoutText}}</button>
+		</div>
+	  </div>	
+	</div>
+	
+	<div ui-view></div>
+    
+	<footer>
+		<div class="footer-content">
+			<a href="#" id="footer-link">Contact Us</a>
+		</div>
+	</footer>
+	
+	<div data-wc-overlay data-wc-overlay-delay="100">
+        <br /><img src="Content/images/spinner.gif" />&nbsp;&nbsp;Loading
+    </div>
+    <!-- 3rd party libraries -->
+    <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+	<script src="https://unpkg.com/@uirouter/angularjs@1.0.5/release/angular-ui-router.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+    <script src="Scripts/angular-ui-bootstrap.js"></script>
+    <script src="Scripts/tweenMax.min.js"></script>
+    
+    <script src="app/wc.directives/directives/wcOverlay.js"></script>
+    <script src="app/wc.directives/directives/menuHighlighter.js"></script>
+
+    <script src="Scripts/breeze.min.js"></script>
+    <script src="Scripts/breeze.angular.js"></script>
+
+    <!-- Load custom scripts via RequireJS -->
+    <script src="Scripts/require.js" data-main="Scripts/main"></script>
+</body>
+</html>
